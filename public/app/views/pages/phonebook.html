@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  </head>
+
+
+<body>
+
+    <div class="container">
+
+      <form class="form-signin" ng-submit="contact.contact(contactdata)">
+        <h2 class="form-signin-heading">Add contact Number </h2>
+        
+        <label for="contact" class="sr-only">Contact</label>
+        <input type="text" id="contact" class="form-control" placeholder="contact"  ng-model="contact.contactdata.contact">
+        
+        <label for="inputnumber" class="sr-only">Phone number</label>
+        <input type="text" id="number" class="form-control" placeholder="number"  ng-model="contact.contactdata.number">
+                
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+      </form>
+
+    </div> <!-- /container -->
+
+    </body>
+    </html>

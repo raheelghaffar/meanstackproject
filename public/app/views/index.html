@@ -1,0 +1,96 @@
+ 
+ 
+ <!DOCTYPE html>
+<html>
+
+<head>
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+  <script src = "assets/js/angular.js"></script>
+  <script src = "assets/js/angular-route.js"></script>
+  <!-- angular  -->
+  <script src = "app/app.js"></script>
+  <script src = "app/route.js"></script>
+    <!-- angular Controllers  -->
+ <script src = "app/controllers/userctrl.js"></script>
+ <script src = "app/controllers/authctrl.js"></script>
+ <script src = "app/controllers/contactctrl.js"></script>
+ 
+<!-- angular services -->
+ <script src = "app/services/userService.js"></script>
+<script src = "app/services/authService.js"></script>
+  <script src = "app/services/contactservice.js"></script>
+  </head>
+
+
+<body ng-app= "NgApp" ng-controller="Authctrl as auth">
+ 
+
+ 
+   <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" >Mean Stack Project</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+           
+            <li class="active"><a href="#!/about" ng-show="checking()">HOME</a>
+            
+            <li><a href="#!/register" ng-hide="checking()">Register</a></li>
+            <li><a href="#!/login" ng-hide="checking()">login</a></li>
+             <li><a href="/" ng-show="checking()" ng-click="auth.logout()">logout</a></li>
+           
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+           
+          <li class="active"> <span class="sr-only">(current)</span></a></li>
+          <li><a href="#!/save" ng-show="login" ng-controller="contactsave as contact">Contact</a></li>
+          </ul>
+              
+           
+            
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+     
+<br><br><br>
+   <div ng-view></div>
+
+    </div> <!-- /container -->
+
+
+
+<!--<script src = "assets/js/jquery-3.2.0.min.js"></script> -->
+
+</body>
+</html>
+ 
+ 
+ 
+ 
